@@ -1,4 +1,4 @@
-<index class="html"></index>
+<index class="htm"></index>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -262,10 +262,18 @@
                 securityAnswerDiv.textContent = ''; // Clear previous answer
 
                 let chatHistory = [];
+                // Se actúa como un experto en seguridad de la información para responder a la pregunta.
                 chatHistory.push({ role: "user", parts: [{ text: `Actúa como un experto en seguridad de la información y responde a la siguiente pregunta sobre teletrabajo de forma concisa y fácil de entender: ${prompt}` }] });
 
                 const payload = { contents: chatHistory };
-                const apiKey = ""; // If you want to use models other than gemini-2.5-flash-preview-05-20 or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+                // IMPORTANTE: Para que el agente de IA funcione en GitHub Pages (o cualquier sitio web externo),
+                // DEBES insertar tu propia clave de API de Google Gemini aquí.
+                // Obtén tu clave de API desde Google AI Studio o Google Cloud Console.
+                // ADVERTENCIA DE SEGURIDAD: Exponer la clave de API directamente en el código del lado del cliente
+                // (como este HTML) NO es seguro para aplicaciones de producción, ya que cualquiera podría verla y usarla.
+                // Para producción, se recomienda usar un proxy de servidor o funciones sin servidor (como Firebase Functions)
+                // para realizar las llamadas a la API de forma segura.
+                const apiKey = "AIzaSyDx8FRN283gKzhA0icNuzv9J4wyjvr2wl8"; // <--- ¡Inserta tu clave de API aquí para que funcione en GitHub Pages!
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                 let retries = 0;
