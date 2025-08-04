@@ -1,0 +1,318 @@
+<index class="html"></index>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín de Seguridad en Teletrabajo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Universal box-sizing for consistency across all elements */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top for better viewing */
+            min-height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
+            width: 100%; /* Ensure body takes full width within the iframe */
+        }
+        .boletin-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Increased max-width for overall layout */
+            width: 100%; /* Ensure it always tries to take 100% of its parent's width */
+            padding: 2.5rem;
+            text-align: center;
+            overflow: hidden;
+            margin: 0 auto; /* Center the container horizontally */
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+        .icon-wrapper {
+            background-color: #e0f2fe;
+            border-radius: 50%;
+            padding: 1rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            width: 80px;
+            height: 80px;
+        }
+        .icon-wrapper svg {
+            width: 40px;
+            height: 40px;
+            color: #0284c7;
+        }
+        .call-to-action, .consejo-experto, .pregunta-experto-container {
+            width: 100%; /* Force full width */
+            max-width: 100%; /* Prevent overflow */
+            margin-left: auto; /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #334155;
+            box-sizing: border-box; /* Include padding/border in width */
+        }
+        .call-to-action {
+            background-color: #f0f9ff;
+            border-left: 5px solid #0ea5e9;
+        }
+        .consejo-experto {
+            background-color: #f0fdf4;
+            border-left: 5px solid #22c55e;
+        }
+        .pregunta-experto-container {
+            background-color: #e0f2fe; /* Light blue for AI section */
+            border-left: 5px solid #0284c7;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive adjustments for icons */
+        @media (max-width: 768px) {
+            .boletin-container {
+                padding: 1.5rem;
+            }
+            .icon-wrapper {
+                width: 70px;
+                height: 70px;
+            }
+            .icon-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .icon-wrapper svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Force horizontal layout for key points - More aggressive flex */
+        .key-points-container {
+            display: flex;
+            flex-direction: row; /* Explicitly set to row */
+            flex-wrap: wrap; /* Allow wrapping if space is truly limited */
+            justify-content: center; /* Center items */
+            gap: 1.5rem; /* Space between items */
+            width: 100%; /* Ensure it takes full width */
+        }
+        .key-points-container > div {
+            flex: 1 1 28%; /* Give each item a base width, allowing it to grow/shrink */
+            min-width: 200px; /* Ensure minimum width before wrapping */
+            max-width: 300px; /* Prevent excessive stretching */
+            box-sizing: border-box;
+            padding: 1.5rem; /* Ensure consistent padding */
+        }
+
+        /* Specific adjustments for smaller screens, if flex-wrap occurs */
+        @media (max-width: 700px) { /* Adjust breakpoint if needed */
+            .key-points-container > div {
+                flex: 1 1 calc(48% - 1rem); /* Two columns on smaller screens */
+            }
+        }
+        @media (max-width: 450px) { /* Adjust breakpoint if needed */
+            .key-points-container > div {
+                flex: 1 1 100%; /* Single column on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boletin-container">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4 leading-tight">
+            Tu Oficina Segura en Casa:
+            <span class="block text-blue-500 text-3xl md:text-4xl mt-2">¡Teletrabajo sin Riesgos!</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+            Refuerza tu seguridad desde casa con estos 3 consejos clave.
+        </p>
+
+        <!-- Main illustrative image (placeholder) -->
+        <img src="https://placehold.co/600x300/e0f2fe/0284c7?text=Tu+Espacio+de+Trabajo+Seguro" alt="Ilustración de un espacio de trabajo seguro en casa" class="main-image">
+
+        <div class="key-points-container mt-8">
+            <!-- Punto 1: Redes Seguras -->
+            <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center border border-blue-100">
+                <div class="icon-wrapper">
+                    <!-- SVG Icon for Secure Networks -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2.25c0 .66.603 1.2 1.342.978l4.017-1.102a1.125 1.125 0 011.342 1.066V21h-1.562a1.125 1.125 0 01-1.125-1.125v-1.5c0-.66-.603-1.2-1.342-.978l-4.017 1.102a1.125 1.125 0 01-1.342-1.066V3h1.562c.621 0 1.125.504 1.125 1.125v1.5c0 .66.603 1.2 1.342.978l4.017-1.102a1.125 1.125 0 011.342 1.066V9h-1.562a1.125 1.125 0 01-1.125-1.125v-1.5c0-.66-.603-1.2-1.342-.978L8.29 6.79a1.125 1.125 0 01-1.342-1.066V3.75C6.948 3.33 6.618 3 6.25 3H3.75A.75.75 0 003 3.75v16.5c0 .414.33.75.75.75h2.5c.368 0 .698-.33.75-.75V15m0-12H6.25c-.414 0-.75.33-.75.75v1.5c0 .66.603 1.2 1.342.978l4.017-1.102a1.125 1.125 0 011.342 1.066V9m0 6H6.25c-.414 0-.75.33-.75.75v1.5c0 .66.603 1.2 1.342.978l4.017-1.102a1.125 1.125 0 011.342 1.066V21" />
+                    </svg>
+                </div>
+                <h3 class="section-title">1. Redes Seguras</h3>
+                <p class="text-gray-700 text-sm">
+                    ¡Conexión segura, tranquilidad garantizada! No uses Wi-Fi públicas. En casa, protege tu red con una contraseña fuerte y un buen cifrado de seguridad como WPA2 o WPA3.
+                </p>
+            </div>
+
+            <!-- Punto 2: Bloquear Pantalla -->
+            <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center border border-blue-100">
+                <div class="icon-wrapper">
+                    <!-- SVG Icon for Lock Screen -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                </div>
+                <h3 class="section-title">2. Bloquea tu Pantalla</h3>
+                <p class="text-gray-700 text-sm">
+                    Tu pantalla es tu muro protector. Bloquea tu equipo al levantarte, incluso por un minuto. ¡Es un hábito simple y efectivo! (Atajo: Win + L en Windows o en Mac Cmd + Ctrl + Q).
+                </p>
+            </div>
+
+            <!-- Punto 3: Evitar Uso Compartido -->
+            <div class="p-6 bg-white rounded-xl shadow-md flex flex-col items-center border border-blue-100">
+                <div class="icon-wrapper">
+                    <!-- Placeholder Image for No Sharing Icon - Replaced complex SVG -->
+                    <img src="https://placehold.co/80x80/e0f2fe/0284c7?text=NO+COMPARTIR" alt="Icono de No Compartir" class="w-full h-full object-contain">
+                </div>
+                <h3 class="section-title">3. Uso Exclusivo</h3>
+                <p class="text-gray-700 text-sm">
+                    La información confidencial es solo tuya. Tu equipo de trabajo es para uso exclusivo laboral. Evita que otros lo usen para juegos o navegación personal.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sección: Consejo del Experto -->
+        <div class="consejo-experto">
+            <h3 class="font-bold text-blue-800 mb-2 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2 text-green-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 1.5a6 6 0 01-6-6V6.75m6 1.5V3a6 6 0 00-6 6v1.5m6-1.5a6 6 0 016 6v-1.5m-6 1.5v3.75m-3.75 0h7.5M12 12.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Consejo del Experto: Videollamadas Seguras
+            </h3>
+            <p class="text-gray-700 text-sm">
+                Asegúrate de que el fondo de tu videollamada sea neutro y sin documentos confidenciales a la vista. ¡Y no olvides silenciar tu micrófono cuando no estés hablando!
+            </p>
+        </div>
+
+        <!-- Nueva Sección: Pregunta al Experto con Gemini API -->
+        <div class="mt-8 p-6 bg-blue-50 rounded-xl shadow-md border border-blue-200 text-left pregunta-experto-container">
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+                Pregunta al Experto ✨
+            </h2>
+            <p class="text-gray-700 mb-4">
+                ¿Tienes alguna duda sobre seguridad en el teletrabajo? ¡Pregúntale a nuestro experto virtual!
+            </p>
+            <textarea id="securityQuestion"
+                      class="w-full p-3 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 text-gray-800"
+                      rows="3"
+                      placeholder="Ej: ¿Es seguro usar una VPN pública?"></textarea>
+            <button id="askButton"
+                    class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-300 ease-in-out font-semibold shadow-lg transform hover:scale-105">
+                Obtener Respuesta
+            </button>
+            <div id="loadingIndicator" class="mt-4 text-center text-blue-600 font-semibold hidden">
+                Cargando respuesta...
+            </div>
+            <div id="securityAnswer" class="mt-4 p-4 bg-white border border-blue-300 rounded-md text-gray-800 text-sm text-left whitespace-pre-wrap">
+                <!-- La respuesta del LLM aparecerá aquí -->
+            </div>
+        </div>
+
+        <!-- Llamada a la Acción -->
+        <div class="call-to-action">
+            <p class="text-gray-800 font-semibold mb-1">
+                Tu seguridad es nuestra prioridad.
+            </p>
+            <p class="text-gray-700 text-sm">
+                Si tienes dudas o detectas algo sospechoso, repórtalo inmediatamente a <span class="font-bold text-blue-700">[javier.zorrilla@latingroup.pe]</span>.
+                <br>¡Gracias por ser parte de una cultura de seguridad!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const askButton = document.getElementById('askButton');
+            const securityQuestionInput = document.getElementById('securityQuestion');
+            const securityAnswerDiv = document.getElementById('securityAnswer');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+
+            askButton.addEventListener('click', async () => {
+                const prompt = securityQuestionInput.value.trim();
+                if (!prompt) {
+                    securityAnswerDiv.textContent = 'Por favor, escribe tu pregunta.';
+                    return;
+                }
+
+                loadingIndicator.classList.remove('hidden');
+                securityAnswerDiv.textContent = ''; // Clear previous answer
+
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `Actúa como un experto en seguridad de la información y responde a la siguiente pregunta sobre teletrabajo de forma concisa y fácil de entender: ${prompt}` }] });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // If you want to use models other than gemini-2.5-flash-preview-05-20 or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                let retries = 0;
+                const maxRetries = 5;
+                const baseDelay = 1000; // 1 second
+
+                while (retries < maxRetries) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!response.ok) {
+                            if (response.status === 429) { // Too Many Requests
+                                const delay = baseDelay * Math.pow(2, retries) + Math.random() * 1000; // Exponential backoff with jitter
+                                retries++;
+                                await new Promise(res => setTimeout(res, delay));
+                                continue; // Retry the request
+                            } else {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
+                        }
+
+                        const result = await response.json();
+                        if (result.candidates && result.candidates.length > 0 &&
+                            result.candidates[0].content && result.candidates[0].content.parts &&
+                            result.candidates[0].content.parts.length > 0) {
+                            const text = result.candidates[0].content.parts[0].text;
+                            securityAnswerDiv.textContent = text;
+                        } else {
+                            securityAnswerDiv.textContent = 'No se pudo obtener una respuesta. Intenta de nuevo.';
+                        }
+                        break; // Exit loop on success
+                    } catch (error) {
+                        console.error('Error al llamar a la API de Gemini:', error);
+                        securityAnswerDiv.textContent = 'Ocurrió un error al procesar tu pregunta. Por favor, inténtalo más tarde.';
+                        break; // Exit loop on unrecoverable error
+                    } finally {
+                        loadingIndicator.classList.add('hidden');
+                    }
+                }
+                if (retries === maxRetries) {
+                    securityAnswerDiv.textContent = 'Demasiados intentos fallidos. Por favor, inténtalo más tarde.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
